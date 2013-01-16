@@ -16,12 +16,16 @@ class account (models.Model):
     end_date=models.DateField(default=datetime.datetime.now)
     status=models.IntegerField(default=0)
     approver=models.ForeignKey(my_user,related_name="approver")
+    level=models.IntegerField(default=0) 
     
     def __unicode__(self):
         return self.amount
 
     class Meta:
         ordering = ['beg_date']
+
+class account_show(admin.ModelAdmin):
+    list_display=('user_id','department','beg_date')
 
 admin.site.register(account)
 

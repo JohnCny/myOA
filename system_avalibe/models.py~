@@ -1,5 +1,6 @@
 from django.db import models
 import datetime
+from django.contrib import admin
 
 # Create your models here.
 
@@ -38,3 +39,7 @@ class my_account_type(models.Model):
 
     def __unicode__(self):
         return self.type_name
+
+admin.site.register(my_user)
+admin.site.register(my_account_type)
+admin.site.register(department)

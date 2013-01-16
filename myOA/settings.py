@@ -1,4 +1,5 @@
 # Django settings for myOA project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -19,7 +20,9 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
-
+STATIC_URL = '/static/'
+HERE = os.path.dirname(__file__)
+BASE_DIR=os.path.join(HERE,'..')
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -60,13 +63,12 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
-
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    BASE_DIR+STATIC_URL,
 )
 
 # List of finder classes that know how to find static files in
@@ -108,6 +110,9 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+
+TEMPLATE_DIRS += (os.path.join(  BASE_DIR, 'templates') ,)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -121,7 +126,7 @@ INSTALLED_APPS = (
     #'django.contrib.admindocs',
     'system_avalibe',
     'account_manage',
-   
+    'django-groundwork', 
 )
 
 # A sample logging configuration. The only tangible logging

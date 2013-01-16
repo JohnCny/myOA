@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+
+{% block title %} 新增报销 {% endblock %}
+{% block pagename%} 费用管理 {% endblock %}
+{% block pagesubname %} 新增报销 {% endblock %}
+
+{% block content %}
+
+<table>
+<form action="" method="POST" class="form-horizontal"> {% csrf_token %}
+    {{form}}
+    <tr><td>
+        <button type="submit" class="btn btn-primary">提 交</button>
+    </td></tr>
+</form>
+</table>
+<script>
+    $('#id_beg_date').datepicker({
+		format: 'mm-dd-yyyy'
+	});
+	$('#id_end_date').datepicker({
+		format: 'mm-dd-yyyy'
+	});
+        
+</script>
+{% endblock %}

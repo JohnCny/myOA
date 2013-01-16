@@ -43,3 +43,4 @@ class my_account_type(models.Model):
 admin.site.register(my_user)
 admin.site.register(my_account_type)
 admin.site.register(department)
+admin.site.register(position)

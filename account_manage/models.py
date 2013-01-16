@@ -1,3 +1,4 @@
+# -*- coding: utf8 -*-
 from django.db import models
 import datetime
 from django.contrib import admin
@@ -7,15 +8,16 @@ from system_avalibe.models import my_account_type
 # Create your models here.
 
 class account (models.Model):
-    user_id=models.ForeignKey(my_user,related_name='user_id')
-    department=models.ForeignKey(department)
-    type_id=models.ForeignKey(my_account_type)
-    amount=models.IntegerField()
-    beg_date=models.DateField(default=datetime.datetime.now)
-    modify_date=models.DateField(default=datetime.datetime.now)
-    end_date=models.DateField(default=datetime.datetime.now)
-    status=models.IntegerField(default=0)
-    approver=models.ForeignKey(my_user,related_name="approver")
+    user_id=models.ForeignKey(my_user,related_name='user_id',verbose_name="用户")
+    department=models.ForeignKey(department,verbose_name="所属部门")
+    type_id=models.ForeignKey(my_account_type,verbose_name="费用类型")
+    amount=models.IntegerField(verbose_name="金额")
+    beg_date=models.DateField(default=datetime.datetime.now,verbose_name="费用开始日期")
+    modify_date=models.DateField(default=datetime.datetime.now,verbose_name="修改日期")
+    end_date=models.DateField(default=datetime.datetime.now,verbose_name="费用结束日期")
+    status=models.IntegerField(default=0,verbose_name="当前状态")
+    approver=models.ForeignKey(my_user,related_name="approver",verbose_name="审核人")
+    level=models.IntegerField(default=0,verbose_name="级别") 
     
     def __unicode__(self):
         return self.amount
