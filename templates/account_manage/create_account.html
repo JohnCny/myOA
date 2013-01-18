@@ -8,20 +8,15 @@
 {% block content %}
 
 <table>
-<form action="" method="POST" class="form-horizontal"> {% csrf_token %}
+<form method="POST" class="form-horizontal"> {% csrf_token %}
     {{form}}
-    <tr><td>
-        <button type="submit" class="btn btn-primary">提 交</button>
-    </td></tr>
+    <tr><td colspan="2" align="right"><input class="btn btn-primary" type="submit" value="提交"/></td></tr>
 </form>
 </table>
+
 <script>
-    $('#id_beg_date').datepicker({
-		format: 'mm-dd-yyyy'
-	});
-	$('#id_end_date').datepicker({
-		format: 'mm-dd-yyyy'
-	});
+    $('#id_beg_date').datepicker();
+	$('#id_end_date').datepicker();
         
 </script>
 {% endblock %}

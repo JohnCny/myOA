@@ -2,14 +2,14 @@
 {% extends "base.html" %}
 
 {% block title %} 费用编辑 {% endblock %}
-{% block pagename %} 费用编辑 {% endblock %}
-
+{% block pagename %} 费用管理 {% endblock %}
+{%block pagesubname%} 费用编辑 {%endblock%}
 {% block content %} 
 <table>
 <form action="" method="POST"> {% csrf_token %}
   {{form}}
   <tr>
-    <td colspan="2" align="right"><input type="submit" value="Save"/></td>
+    <td colspan="2" align="right"><input class="btn btn-primary" type="submit" value="提交"/></td>
   </tr>
 </form>
 </table>

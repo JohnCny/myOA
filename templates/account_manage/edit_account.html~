@@ -4,7 +4,6 @@
 {% block title %} 费用编辑 {% endblock %}
 {% block pagename %} 费用编辑 {% endblock %}
 
-{% block heading %} <h1> account</h1><h2> Edit </h2> {% endblock %}
 {% block content %} 
 <table>
 <form action="" method="POST"> {% csrf_token %}

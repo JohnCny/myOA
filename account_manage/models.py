@@ -18,9 +18,9 @@ class account (models.Model):
     status=models.IntegerField(default=0,verbose_name="当前状态")
     approver=models.ForeignKey(my_user,related_name="approver",verbose_name="审核人")
     level=models.IntegerField(default=0,verbose_name="级别") 
-    
+    is_paid=models.IntegerField(default=0,verbose_name="是否付款")
     def __unicode__(self):
-        return self.amount
+        return str(self.amount)
 
     class Meta:
         ordering = ['beg_date']

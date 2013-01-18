@@ -1,0 +1,358 @@
+2013-01-18 16:50:43,092 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 08:50:43' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 08:50:43')
+2013-01-18 16:50:45,046 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 08:50:45' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 08:50:45')
+2013-01-18 16:50:46,358 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 08:50:46' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 08:50:46')
+2013-01-18 16:51:30,265 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 08:51:30' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 08:51:30')
+2013-01-18 16:51:31,671 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 08:51:31' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 08:51:31')
+2013-01-18 16:51:36,171 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 16:51:36,171 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 16:51:36,187 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 16:51:36,187 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 16:51:36,187 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 16:51:36,187 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 16:51:40,875 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 08:51:40' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 08:51:40')
+2013-01-18 16:52:46,328 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 08:52:46' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 08:52:46')
+2013-01-18 16:53:24,655 ERROR Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\Python27\lib\site-packages\django\core\handlers\base.py", line 129, in get_response
+    raise ValueError("The view %s.%s didn't return an HttpResponse object." % (callback.__module__, view_name))
+ValueError: The view myOA.views.login_view didn't return an HttpResponse object.
+2013-01-18 16:54:43,967 ERROR Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\Python27\lib\site-packages\django\core\handlers\base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "E:\Python27\lib\site-packages\django\utils\decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "G:\myOA\myOA\views.py", line 19, in login_view
+    return render_to_response('/login/',{},context_instance=RequestContext(request))
+  File "E:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "E:\Python27\lib\site-packages\django\template\loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "E:\Python27\lib\site-packages\django\template\loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "E:\Python27\lib\site-packages\django\template\loader.py", line 138, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: /login/
+2013-01-18 16:55:48,342 DEBUG (0.000) SELECT `system_avalibe_my_user`.`id`, `system_avalibe_my_user`.`login_name`, `system_avalibe_my_user`.`login_password`, `system_avalibe_my_user`.`real_name`, `system_avalibe_my_user`.`telephone`, `system_avalibe_my_user`.`mobilephone`, `system_avalibe_my_user`.`position_id`, `system_avalibe_my_user`.`department_id`, `system_avalibe_my_user`.`last_login_date`, `system_avalibe_my_user`.`birthday` FROM `system_avalibe_my_user` WHERE (`system_avalibe_my_user`.`login_name` = 'test'  AND `system_avalibe_my_user`.`login_password` = '1' ); args=(u'test', u'1')
+2013-01-18 16:55:48,342 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 08:55:48' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 08:55:48')
+2013-01-18 16:55:48,342 DEBUG (0.000) SAVEPOINT s3452_x1; args=()
+2013-01-18 16:55:48,342 DEBUG (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  LIMIT 1; args=('49126258d88009b36883ec7d9deb512e',)
+2013-01-18 16:55:48,342 DEBUG (0.000) UPDATE `django_session` SET `session_data` = 'OTE3ZDI2ZGQxNTFmYzE2ZDU5M2ZlZmYxNzlhMTQyMWIzYmQ4NmVhMDqAAn1xAShVDV9hdXRoX3Vz\nZXJfaWSKAQFVCmxvZ2luX25hbWVYBAAAAHRlc3RVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdv\nLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVBHVzZXJjZGphbmdvLmRiLm1vZGVs\ncy5iYXNlCm1vZGVsX3VucGlja2xlCnECY3N5c3RlbV9hdmFsaWJlLm1vZGVscwpteV91c2VyCnED\nXWNkamFuZ28uZGIubW9kZWxzLmJhc2UKc2ltcGxlX2NsYXNzX2ZhY3RvcnkKcQSHUnEFfXEGKFUK\nbG9naW5fbmFtZXEHWAQAAAB0ZXN0VQttb2JpbGVwaG9uZXEIWAcAAAAxMjMzMjEyVQtwb3NpdGlv\nbl9pZHEJigEBVQZfc3RhdGVxCmNkamFuZ28uZGIubW9kZWxzLmJhc2UKTW9kZWxTdGF0ZQpxCymB\ncQx9cQ0oVQZhZGRpbmdxDolVAmRicQ9VB2RlZmF1bHR1YlUJdGVsZXBob25lcRBYCAAAADEyMjM0\nNTY3VQlyZWFsX25hbWVxEVgGAAAA5rWL6K+VVQhiaXJ0aGRheXESY2RhdGV0aW1lCmRhdGV0aW1l\nCnETVQoH3QEPBxM5AAAAY2RqYW5nby51dGlscy50aW1lem9uZQpVVEMKcRQpUnEVhlJxFlUPbGFz\ndF9sb2dpbl9kYXRlcRdoE1UKB90BDwcTOQAAAGgVhlJxGFUObG9naW5fcGFzc3dvcmRxGVgBAAAA\nMVUCaWRxGooBAVUNZGVwYXJ0bWVudF9pZHEbigEBdWJ1Lg==\n', `expire_date` = '2013-02-01 08:55:48' WHERE `django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e' ; args=('OTE3ZDI2ZGQxNTFmYzE2ZDU5M2ZlZmYxNzlhMTQyMWIzYmQ4NmVhMDqAAn1xAShVDV9hdXRoX3Vz\nZXJfaWSKAQFVCmxvZ2luX25hbWVYBAAAAHRlc3RVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdv\nLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVBHVzZXJjZGphbmdvLmRiLm1vZGVs\ncy5iYXNlCm1vZGVsX3VucGlja2xlCnECY3N5c3RlbV9hdmFsaWJlLm1vZGVscwpteV91c2VyCnED\nXWNkamFuZ28uZGIubW9kZWxzLmJhc2UKc2ltcGxlX2NsYXNzX2ZhY3RvcnkKcQSHUnEFfXEGKFUK\nbG9naW5fbmFtZXEHWAQAAAB0ZXN0VQttb2JpbGVwaG9uZXEIWAcAAAAxMjMzMjEyVQtwb3NpdGlv\nbl9pZHEJigEBVQZfc3RhdGVxCmNkamFuZ28uZGIubW9kZWxzLmJhc2UKTW9kZWxTdGF0ZQpxCymB\ncQx9cQ0oVQZhZGRpbmdxDolVAmRicQ9VB2RlZmF1bHR1YlUJdGVsZXBob25lcRBYCAAAADEyMjM0\nNTY3VQlyZWFsX25hbWVxEVgGAAAA5rWL6K+VVQhiaXJ0aGRheXESY2RhdGV0aW1lCmRhdGV0aW1l\nCnETVQoH3QEPBxM5AAAAY2RqYW5nby51dGlscy50aW1lem9uZQpVVEMKcRQpUnEVhlJxFlUPbGFz\ndF9sb2dpbl9kYXRlcRdoE1UKB90BDwcTOQAAAGgVhlJxGFUObG9naW5fcGFzc3dvcmRxGVgBAAAA\nMVUCaWRxGooBAVUNZGVwYXJ0bWVudF9pZHEbigEBdWJ1Lg==\n', u'2013-02-01 08:55:48', '49126258d88009b36883ec7d9deb512e')
+2013-01-18 16:59:10,312 DEBUG (0.000) SELECT `system_avalibe_my_user`.`id`, `system_avalibe_my_user`.`login_name`, `system_avalibe_my_user`.`login_password`, `system_avalibe_my_user`.`real_name`, `system_avalibe_my_user`.`telephone`, `system_avalibe_my_user`.`mobilephone`, `system_avalibe_my_user`.`position_id`, `system_avalibe_my_user`.`department_id`, `system_avalibe_my_user`.`last_login_date`, `system_avalibe_my_user`.`birthday` FROM `system_avalibe_my_user` WHERE (`system_avalibe_my_user`.`login_name` = 'test'  AND `system_avalibe_my_user`.`login_password` = '1' ); args=(u'test', u'1')
+2013-01-18 16:59:10,328 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 08:59:10' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 08:59:10')
+2013-01-18 16:59:10,328 DEBUG (0.000) SAVEPOINT s4600_x1; args=()
+2013-01-18 16:59:10,328 DEBUG (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  LIMIT 1; args=('49126258d88009b36883ec7d9deb512e',)
+2013-01-18 16:59:10,328 DEBUG (0.000) UPDATE `django_session` SET `session_data` = 'MjRiMGQwOWQzNDExZWE5NjIwMTNkN2MyZmExYmE2MjZjZjZkNTIzYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZFUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVCmxv\nZ2luX25hbWVYBAAAAHRlc3RVDV9hdXRoX3VzZXJfaWSKAQFVBHVzZXJjZGphbmdvLmRiLm1vZGVs\ncy5iYXNlCm1vZGVsX3VucGlja2xlCnECY3N5c3RlbV9hdmFsaWJlLm1vZGVscwpteV91c2VyCnED\nXWNkamFuZ28uZGIubW9kZWxzLmJhc2UKc2ltcGxlX2NsYXNzX2ZhY3RvcnkKcQSHUnEFfXEGKFUK\nbG9naW5fbmFtZXEHWAQAAAB0ZXN0VQttb2JpbGVwaG9uZXEIWAcAAAAxMjMzMjEyVQtwb3NpdGlv\nbl9pZHEJigEBVQZfc3RhdGVxCmNkamFuZ28uZGIubW9kZWxzLmJhc2UKTW9kZWxTdGF0ZQpxCymB\ncQx9cQ0oVQZhZGRpbmdxDolVAmRicQ9VB2RlZmF1bHR1YlUJdGVsZXBob25lcRBYCAAAADEyMjM0\nNTY3VQlyZWFsX25hbWVxEVgGAAAA5rWL6K+VVQhiaXJ0aGRheXESY2RhdGV0aW1lCmRhdGV0aW1l\nCnETVQoH3QEPBxM5AAAAY2RqYW5nby51dGlscy50aW1lem9uZQpVVEMKcRQpUnEVhlJxFlUPbGFz\ndF9sb2dpbl9kYXRlcRdoE1UKB90BDwcTOQAAAGgVhlJxGFUObG9naW5fcGFzc3dvcmRxGVgBAAAA\nMVUCaWRxGooBAVUNZGVwYXJ0bWVudF9pZHEbigEBdWJ1Lg==\n', `expire_date` = '2013-02-01 08:59:10' WHERE `django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e' ; args=('MjRiMGQwOWQzNDExZWE5NjIwMTNkN2MyZmExYmE2MjZjZjZkNTIzYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZFUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVCmxv\nZ2luX25hbWVYBAAAAHRlc3RVDV9hdXRoX3VzZXJfaWSKAQFVBHVzZXJjZGphbmdvLmRiLm1vZGVs\ncy5iYXNlCm1vZGVsX3VucGlja2xlCnECY3N5c3RlbV9hdmFsaWJlLm1vZGVscwpteV91c2VyCnED\nXWNkamFuZ28uZGIubW9kZWxzLmJhc2UKc2ltcGxlX2NsYXNzX2ZhY3RvcnkKcQSHUnEFfXEGKFUK\nbG9naW5fbmFtZXEHWAQAAAB0ZXN0VQttb2JpbGVwaG9uZXEIWAcAAAAxMjMzMjEyVQtwb3NpdGlv\nbl9pZHEJigEBVQZfc3RhdGVxCmNkamFuZ28uZGIubW9kZWxzLmJhc2UKTW9kZWxTdGF0ZQpxCymB\ncQx9cQ0oVQZhZGRpbmdxDolVAmRicQ9VB2RlZmF1bHR1YlUJdGVsZXBob25lcRBYCAAAADEyMjM0\nNTY3VQlyZWFsX25hbWVxEVgGAAAA5rWL6K+VVQhiaXJ0aGRheXESY2RhdGV0aW1lCmRhdGV0aW1l\nCnETVQoH3QEPBxM5AAAAY2RqYW5nby51dGlscy50aW1lem9uZQpVVEMKcRQpUnEVhlJxFlUPbGFz\ndF9sb2dpbl9kYXRlcRdoE1UKB90BDwcTOQAAAGgVhlJxGFUObG9naW5fcGFzc3dvcmRxGVgBAAAA\nMVUCaWRxGooBAVUNZGVwYXJ0bWVudF9pZHEbigEBdWJ1Lg==\n', u'2013-02-01 08:59:10', '49126258d88009b36883ec7d9deb512e')
+2013-01-18 17:02:25,703 DEBUG (0.000) SELECT `system_avalibe_my_user`.`id`, `system_avalibe_my_user`.`login_name`, `system_avalibe_my_user`.`login_password`, `system_avalibe_my_user`.`real_name`, `system_avalibe_my_user`.`telephone`, `system_avalibe_my_user`.`mobilephone`, `system_avalibe_my_user`.`position_id`, `system_avalibe_my_user`.`department_id`, `system_avalibe_my_user`.`last_login_date`, `system_avalibe_my_user`.`birthday` FROM `system_avalibe_my_user` WHERE (`system_avalibe_my_user`.`login_name` = 'test'  AND `system_avalibe_my_user`.`login_password` = '1' ); args=(u'test', u'1')
+2013-01-18 17:02:25,717 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 09:02:25' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 09:02:25')
+2013-01-18 17:02:25,717 DEBUG (0.000) SAVEPOINT s4428_x1; args=()
+2013-01-18 17:02:25,717 DEBUG (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  LIMIT 1; args=('49126258d88009b36883ec7d9deb512e',)
+2013-01-18 17:02:25,717 DEBUG (0.000) UPDATE `django_session` SET `session_data` = 'OTE3ZDI2ZGQxNTFmYzE2ZDU5M2ZlZmYxNzlhMTQyMWIzYmQ4NmVhMDqAAn1xAShVDV9hdXRoX3Vz\nZXJfaWSKAQFVCmxvZ2luX25hbWVYBAAAAHRlc3RVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdv\nLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVBHVzZXJjZGphbmdvLmRiLm1vZGVs\ncy5iYXNlCm1vZGVsX3VucGlja2xlCnECY3N5c3RlbV9hdmFsaWJlLm1vZGVscwpteV91c2VyCnED\nXWNkamFuZ28uZGIubW9kZWxzLmJhc2UKc2ltcGxlX2NsYXNzX2ZhY3RvcnkKcQSHUnEFfXEGKFUK\nbG9naW5fbmFtZXEHWAQAAAB0ZXN0VQttb2JpbGVwaG9uZXEIWAcAAAAxMjMzMjEyVQtwb3NpdGlv\nbl9pZHEJigEBVQZfc3RhdGVxCmNkamFuZ28uZGIubW9kZWxzLmJhc2UKTW9kZWxTdGF0ZQpxCymB\ncQx9cQ0oVQZhZGRpbmdxDolVAmRicQ9VB2RlZmF1bHR1YlUJdGVsZXBob25lcRBYCAAAADEyMjM0\nNTY3VQlyZWFsX25hbWVxEVgGAAAA5rWL6K+VVQhiaXJ0aGRheXESY2RhdGV0aW1lCmRhdGV0aW1l\nCnETVQoH3QEPBxM5AAAAY2RqYW5nby51dGlscy50aW1lem9uZQpVVEMKcRQpUnEVhlJxFlUPbGFz\ndF9sb2dpbl9kYXRlcRdoE1UKB90BDwcTOQAAAGgVhlJxGFUObG9naW5fcGFzc3dvcmRxGVgBAAAA\nMVUCaWRxGooBAVUNZGVwYXJ0bWVudF9pZHEbigEBdWJ1Lg==\n', `expire_date` = '2013-02-01 09:02:25' WHERE `django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e' ; args=('OTE3ZDI2ZGQxNTFmYzE2ZDU5M2ZlZmYxNzlhMTQyMWIzYmQ4NmVhMDqAAn1xAShVDV9hdXRoX3Vz\nZXJfaWSKAQFVCmxvZ2luX25hbWVYBAAAAHRlc3RVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdv\nLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVBHVzZXJjZGphbmdvLmRiLm1vZGVs\ncy5iYXNlCm1vZGVsX3VucGlja2xlCnECY3N5c3RlbV9hdmFsaWJlLm1vZGVscwpteV91c2VyCnED\nXWNkamFuZ28uZGIubW9kZWxzLmJhc2UKc2ltcGxlX2NsYXNzX2ZhY3RvcnkKcQSHUnEFfXEGKFUK\nbG9naW5fbmFtZXEHWAQAAAB0ZXN0VQttb2JpbGVwaG9uZXEIWAcAAAAxMjMzMjEyVQtwb3NpdGlv\nbl9pZHEJigEBVQZfc3RhdGVxCmNkamFuZ28uZGIubW9kZWxzLmJhc2UKTW9kZWxTdGF0ZQpxCymB\ncQx9cQ0oVQZhZGRpbmdxDolVAmRicQ9VB2RlZmF1bHR1YlUJdGVsZXBob25lcRBYCAAAADEyMjM0\nNTY3VQlyZWFsX25hbWVxEVgGAAAA5rWL6K+VVQhiaXJ0aGRheXESY2RhdGV0aW1lCmRhdGV0aW1l\nCnETVQoH3QEPBxM5AAAAY2RqYW5nby51dGlscy50aW1lem9uZQpVVEMKcRQpUnEVhlJxFlUPbGFz\ndF9sb2dpbl9kYXRlcRdoE1UKB90BDwcTOQAAAGgVhlJxGFUObG9naW5fcGFzc3dvcmRxGVgBAAAA\nMVUCaWRxGooBAVUNZGVwYXJ0bWVudF9pZHEbigEBdWJ1Lg==\n', u'2013-02-01 09:02:25', '49126258d88009b36883ec7d9deb512e')
+2013-01-18 17:03:13,578 DEBUG (0.000) SELECT `system_avalibe_my_user`.`id`, `system_avalibe_my_user`.`login_name`, `system_avalibe_my_user`.`login_password`, `system_avalibe_my_user`.`real_name`, `system_avalibe_my_user`.`telephone`, `system_avalibe_my_user`.`mobilephone`, `system_avalibe_my_user`.`position_id`, `system_avalibe_my_user`.`department_id`, `system_avalibe_my_user`.`last_login_date`, `system_avalibe_my_user`.`birthday` FROM `system_avalibe_my_user` WHERE (`system_avalibe_my_user`.`login_name` = 'test'  AND `system_avalibe_my_user`.`login_password` = '1' ); args=(u'test', u'1')
+2013-01-18 17:03:13,578 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 09:03:13' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 09:03:13')
+2013-01-18 17:03:13,578 DEBUG (0.000) SAVEPOINT s1136_x1; args=()
+2013-01-18 17:03:13,578 DEBUG (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  LIMIT 1; args=('49126258d88009b36883ec7d9deb512e',)
+2013-01-18 17:03:13,578 DEBUG (0.000) UPDATE `django_session` SET `session_data` = 'MjRiMGQwOWQzNDExZWE5NjIwMTNkN2MyZmExYmE2MjZjZjZkNTIzYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZFUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVCmxv\nZ2luX25hbWVYBAAAAHRlc3RVDV9hdXRoX3VzZXJfaWSKAQFVBHVzZXJjZGphbmdvLmRiLm1vZGVs\ncy5iYXNlCm1vZGVsX3VucGlja2xlCnECY3N5c3RlbV9hdmFsaWJlLm1vZGVscwpteV91c2VyCnED\nXWNkamFuZ28uZGIubW9kZWxzLmJhc2UKc2ltcGxlX2NsYXNzX2ZhY3RvcnkKcQSHUnEFfXEGKFUK\nbG9naW5fbmFtZXEHWAQAAAB0ZXN0VQttb2JpbGVwaG9uZXEIWAcAAAAxMjMzMjEyVQtwb3NpdGlv\nbl9pZHEJigEBVQZfc3RhdGVxCmNkamFuZ28uZGIubW9kZWxzLmJhc2UKTW9kZWxTdGF0ZQpxCymB\ncQx9cQ0oVQZhZGRpbmdxDolVAmRicQ9VB2RlZmF1bHR1YlUJdGVsZXBob25lcRBYCAAAADEyMjM0\nNTY3VQlyZWFsX25hbWVxEVgGAAAA5rWL6K+VVQhiaXJ0aGRheXESY2RhdGV0aW1lCmRhdGV0aW1l\nCnETVQoH3QEPBxM5AAAAY2RqYW5nby51dGlscy50aW1lem9uZQpVVEMKcRQpUnEVhlJxFlUPbGFz\ndF9sb2dpbl9kYXRlcRdoE1UKB90BDwcTOQAAAGgVhlJxGFUObG9naW5fcGFzc3dvcmRxGVgBAAAA\nMVUCaWRxGooBAVUNZGVwYXJ0bWVudF9pZHEbigEBdWJ1Lg==\n', `expire_date` = '2013-02-01 09:03:13' WHERE `django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e' ; args=('MjRiMGQwOWQzNDExZWE5NjIwMTNkN2MyZmExYmE2MjZjZjZkNTIzYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZFUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVCmxv\nZ2luX25hbWVYBAAAAHRlc3RVDV9hdXRoX3VzZXJfaWSKAQFVBHVzZXJjZGphbmdvLmRiLm1vZGVs\ncy5iYXNlCm1vZGVsX3VucGlja2xlCnECY3N5c3RlbV9hdmFsaWJlLm1vZGVscwpteV91c2VyCnED\nXWNkamFuZ28uZGIubW9kZWxzLmJhc2UKc2ltcGxlX2NsYXNzX2ZhY3RvcnkKcQSHUnEFfXEGKFUK\nbG9naW5fbmFtZXEHWAQAAAB0ZXN0VQttb2JpbGVwaG9uZXEIWAcAAAAxMjMzMjEyVQtwb3NpdGlv\nbl9pZHEJigEBVQZfc3RhdGVxCmNkamFuZ28uZGIubW9kZWxzLmJhc2UKTW9kZWxTdGF0ZQpxCymB\ncQx9cQ0oVQZhZGRpbmdxDolVAmRicQ9VB2RlZmF1bHR1YlUJdGVsZXBob25lcRBYCAAAADEyMjM0\nNTY3VQlyZWFsX25hbWVxEVgGAAAA5rWL6K+VVQhiaXJ0aGRheXESY2RhdGV0aW1lCmRhdGV0aW1l\nCnETVQoH3QEPBxM5AAAAY2RqYW5nby51dGlscy50aW1lem9uZQpVVEMKcRQpUnEVhlJxFlUPbGFz\ndF9sb2dpbl9kYXRlcRdoE1UKB90BDwcTOQAAAGgVhlJxGFUObG9naW5fcGFzc3dvcmRxGVgBAAAA\nMVUCaWRxGooBAVUNZGVwYXJ0bWVudF9pZHEbigEBdWJ1Lg==\n', u'2013-02-01 09:03:13', '49126258d88009b36883ec7d9deb512e')
+2013-01-18 17:03:13,655 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:03:13,671 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:03:13,671 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:03:13,671 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:03:13,671 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:03:13,671 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:06:34,030 DEBUG (0.000) SELECT `system_avalibe_my_user`.`id`, `system_avalibe_my_user`.`login_name`, `system_avalibe_my_user`.`login_password`, `system_avalibe_my_user`.`real_name`, `system_avalibe_my_user`.`telephone`, `system_avalibe_my_user`.`mobilephone`, `system_avalibe_my_user`.`position_id`, `system_avalibe_my_user`.`department_id`, `system_avalibe_my_user`.`last_login_date`, `system_avalibe_my_user`.`birthday` FROM `system_avalibe_my_user` WHERE (`system_avalibe_my_user`.`login_name` = 'admin'  AND `system_avalibe_my_user`.`login_password` = '1' ); args=(u'admin', u'1')
+2013-01-18 17:06:34,030 ERROR Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\Python27\lib\site-packages\django\core\handlers\base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "E:\Python27\lib\site-packages\django\utils\decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "G:\myOA\myOA\views.py", line 15, in login_view
+    myUser = my_user.objects.get(login_name=mlogin_name,login_password=mlogin_password)
+  File "E:\Python27\lib\site-packages\django\db\models\manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "E:\Python27\lib\site-packages\django\db\models\query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: my_user matching query does not exist.
+2013-01-18 17:06:34,108 DEBUG (0.000) SELECT `system_avalibe_my_user`.`id`, `system_avalibe_my_user`.`login_name`, `system_avalibe_my_user`.`login_password`, `system_avalibe_my_user`.`real_name`, `system_avalibe_my_user`.`telephone`, `system_avalibe_my_user`.`mobilephone`, `system_avalibe_my_user`.`position_id`, `system_avalibe_my_user`.`department_id`, `system_avalibe_my_user`.`last_login_date`, `system_avalibe_my_user`.`birthday` FROM `system_avalibe_my_user` LIMIT 21; args=()
+2013-01-18 17:07:24,125 DEBUG (0.000) SELECT `system_avalibe_my_user`.`id`, `system_avalibe_my_user`.`login_name`, `system_avalibe_my_user`.`login_password`, `system_avalibe_my_user`.`real_name`, `system_avalibe_my_user`.`telephone`, `system_avalibe_my_user`.`mobilephone`, `system_avalibe_my_user`.`position_id`, `system_avalibe_my_user`.`department_id`, `system_avalibe_my_user`.`last_login_date`, `system_avalibe_my_user`.`birthday` FROM `system_avalibe_my_user` WHERE (`system_avalibe_my_user`.`login_name` = 'admin'  AND `system_avalibe_my_user`.`login_password` = '1' ); args=(u'admin', u'1')
+2013-01-18 17:07:26,203 DEBUG (0.000) SELECT `system_avalibe_my_user`.`id`, `system_avalibe_my_user`.`login_name`, `system_avalibe_my_user`.`login_password`, `system_avalibe_my_user`.`real_name`, `system_avalibe_my_user`.`telephone`, `system_avalibe_my_user`.`mobilephone`, `system_avalibe_my_user`.`position_id`, `system_avalibe_my_user`.`department_id`, `system_avalibe_my_user`.`last_login_date`, `system_avalibe_my_user`.`birthday` FROM `system_avalibe_my_user` WHERE (`system_avalibe_my_user`.`login_name` = 'admin'  AND `system_avalibe_my_user`.`login_password` = '1' ); args=(u'admin', u'1')
+2013-01-18 17:08:49,687 DEBUG (0.000) SELECT `system_avalibe_my_user`.`id`, `system_avalibe_my_user`.`login_name`, `system_avalibe_my_user`.`login_password`, `system_avalibe_my_user`.`real_name`, `system_avalibe_my_user`.`telephone`, `system_avalibe_my_user`.`mobilephone`, `system_avalibe_my_user`.`position_id`, `system_avalibe_my_user`.`department_id`, `system_avalibe_my_user`.`last_login_date`, `system_avalibe_my_user`.`birthday` FROM `system_avalibe_my_user` WHERE (`system_avalibe_my_user`.`login_name` = 'test'  AND `system_avalibe_my_user`.`login_password` = '1' ); args=(u'test', u'1')
+2013-01-18 17:08:49,687 DEBUG (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  AND `django_session`.`expire_date` > '2013-01-18 09:08:49' ); args=('49126258d88009b36883ec7d9deb512e', u'2013-01-18 09:08:49')
+2013-01-18 17:08:49,703 DEBUG (0.000) SAVEPOINT s1324_x1; args=()
+2013-01-18 17:08:49,703 DEBUG (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e'  LIMIT 1; args=('49126258d88009b36883ec7d9deb512e',)
+2013-01-18 17:08:49,703 DEBUG (0.000) UPDATE `django_session` SET `session_data` = 'OTE3ZDI2ZGQxNTFmYzE2ZDU5M2ZlZmYxNzlhMTQyMWIzYmQ4NmVhMDqAAn1xAShVDV9hdXRoX3Vz\nZXJfaWSKAQFVCmxvZ2luX25hbWVYBAAAAHRlc3RVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdv\nLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVBHVzZXJjZGphbmdvLmRiLm1vZGVs\ncy5iYXNlCm1vZGVsX3VucGlja2xlCnECY3N5c3RlbV9hdmFsaWJlLm1vZGVscwpteV91c2VyCnED\nXWNkamFuZ28uZGIubW9kZWxzLmJhc2UKc2ltcGxlX2NsYXNzX2ZhY3RvcnkKcQSHUnEFfXEGKFUK\nbG9naW5fbmFtZXEHWAQAAAB0ZXN0VQttb2JpbGVwaG9uZXEIWAcAAAAxMjMzMjEyVQtwb3NpdGlv\nbl9pZHEJigEBVQZfc3RhdGVxCmNkamFuZ28uZGIubW9kZWxzLmJhc2UKTW9kZWxTdGF0ZQpxCymB\ncQx9cQ0oVQZhZGRpbmdxDolVAmRicQ9VB2RlZmF1bHR1YlUJdGVsZXBob25lcRBYCAAAADEyMjM0\nNTY3VQlyZWFsX25hbWVxEVgGAAAA5rWL6K+VVQhiaXJ0aGRheXESY2RhdGV0aW1lCmRhdGV0aW1l\nCnETVQoH3QEPBxM5AAAAY2RqYW5nby51dGlscy50aW1lem9uZQpVVEMKcRQpUnEVhlJxFlUPbGFz\ndF9sb2dpbl9kYXRlcRdoE1UKB90BDwcTOQAAAGgVhlJxGFUObG9naW5fcGFzc3dvcmRxGVgBAAAA\nMVUCaWRxGooBAVUNZGVwYXJ0bWVudF9pZHEbigEBdWJ1Lg==\n', `expire_date` = '2013-02-01 09:08:49' WHERE `django_session`.`session_key` = '49126258d88009b36883ec7d9deb512e' ; args=('OTE3ZDI2ZGQxNTFmYzE2ZDU5M2ZlZmYxNzlhMTQyMWIzYmQ4NmVhMDqAAn1xAShVDV9hdXRoX3Vz\nZXJfaWSKAQFVCmxvZ2luX25hbWVYBAAAAHRlc3RVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdv\nLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVBHVzZXJjZGphbmdvLmRiLm1vZGVs\ncy5iYXNlCm1vZGVsX3VucGlja2xlCnECY3N5c3RlbV9hdmFsaWJlLm1vZGVscwpteV91c2VyCnED\nXWNkamFuZ28uZGIubW9kZWxzLmJhc2UKc2ltcGxlX2NsYXNzX2ZhY3RvcnkKcQSHUnEFfXEGKFUK\nbG9naW5fbmFtZXEHWAQAAAB0ZXN0VQttb2JpbGVwaG9uZXEIWAcAAAAxMjMzMjEyVQtwb3NpdGlv\nbl9pZHEJigEBVQZfc3RhdGVxCmNkamFuZ28uZGIubW9kZWxzLmJhc2UKTW9kZWxTdGF0ZQpxCymB\ncQx9cQ0oVQZhZGRpbmdxDolVAmRicQ9VB2RlZmF1bHR1YlUJdGVsZXBob25lcRBYCAAAADEyMjM0\nNTY3VQlyZWFsX25hbWVxEVgGAAAA5rWL6K+VVQhiaXJ0aGRheXESY2RhdGV0aW1lCmRhdGV0aW1l\nCnETVQoH3QEPBxM5AAAAY2RqYW5nby51dGlscy50aW1lem9uZQpVVEMKcRQpUnEVhlJxFlUPbGFz\ndF9sb2dpbl9kYXRlcRdoE1UKB90BDwcTOQAAAGgVhlJxGFUObG9naW5fcGFzc3dvcmRxGVgBAAAA\nMVUCaWRxGooBAVUNZGVwYXJ0bWVudF9pZHEbigEBdWJ1Lg==\n', u'2013-02-01 09:08:49', '49126258d88009b36883ec7d9deb512e')
+2013-01-18 17:08:49,780 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:08:49,780 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:08:49,780 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:08:49,780 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:08:49,796 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:08:49,796 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:09:43,765 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:09:43,765 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:09:43,780 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:09:43,780 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:09:43,780 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:09:43,780 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:05,750 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:10:05,750 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:10:05,765 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:05,765 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:05,765 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:05,765 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:07,671 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:10:07,671 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:10:07,671 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:07,671 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:07,671 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:07,687 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:08,875 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:10:08,875 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:10:08,875 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:08,875 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:08,875 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:08,875 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:35,796 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:10:35,796 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:10:35,796 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:35,812 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:35,812 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:35,812 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:37,250 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:10:37,250 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:10:37,250 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:37,250 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:37,250 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:10:37,265 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:29,030 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:11:29,030 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:11:29,030 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:29,030 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:29,030 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:29,030 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:46,515 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:11:46,515 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:11:46,515 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:46,515 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:46,515 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:46,530 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:58,812 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:11:58,828 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:11:58,828 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:58,828 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:58,828 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:11:58,828 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:12:07,858 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:12:07,875 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:12:07,875 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:12:07,875 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:12:07,875 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:12:07,875 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:15:28,437 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:15:28,453 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:15:28,453 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:15:28,453 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:15:28,467 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:15:28,467 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:15:40,828 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:15:40,828 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:15:40,828 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:15:40,828 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:15:40,842 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:15:40,842 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:17:10,625 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:17:10,625 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:17:10,640 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:17:10,640 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:17:10,640 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:17:10,640 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:18:33,280 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:18:33,280 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:18:33,280 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:18:33,280 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:18:33,280 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:18:33,280 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:20:29,405 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department`; args=()
+2013-01-18 17:20:29,405 DEBUG (0.000) SELECT `system_avalibe_my_account_type`.`id`, `system_avalibe_my_account_type`.`department_id`, `system_avalibe_my_account_type`.`type_name` FROM `system_avalibe_my_account_type`; args=()
+2013-01-18 17:21:19,780 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department`; args=()
+2013-01-18 17:21:19,780 DEBUG (0.000) SELECT `system_avalibe_my_account_type`.`id`, `system_avalibe_my_account_type`.`department_id`, `system_avalibe_my_account_type`.`type_name` FROM `system_avalibe_my_account_type`; args=()
+2013-01-18 17:23:13,000 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department`; args=()
+2013-01-18 17:23:13,000 DEBUG (0.000) SELECT `system_avalibe_my_account_type`.`id`, `system_avalibe_my_account_type`.`department_id`, `system_avalibe_my_account_type`.`type_name` FROM `system_avalibe_my_account_type`; args=()
+2013-01-18 17:23:29,312 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department`; args=()
+2013-01-18 17:23:29,312 DEBUG (0.000) SELECT `system_avalibe_my_account_type`.`id`, `system_avalibe_my_account_type`.`department_id`, `system_avalibe_my_account_type`.`type_name` FROM `system_avalibe_my_account_type`; args=()
+2013-01-18 17:23:59,515 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department`; args=()
+2013-01-18 17:23:59,515 DEBUG (0.000) SELECT `system_avalibe_my_account_type`.`id`, `system_avalibe_my_account_type`.`department_id`, `system_avalibe_my_account_type`.`type_name` FROM `system_avalibe_my_account_type`; args=()
+2013-01-18 17:24:19,030 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department`; args=()
+2013-01-18 17:24:19,030 DEBUG (0.000) SELECT `system_avalibe_my_account_type`.`id`, `system_avalibe_my_account_type`.`department_id`, `system_avalibe_my_account_type`.`type_name` FROM `system_avalibe_my_account_type`; args=()
+2013-01-18 17:24:44,265 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:24:44,265 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:24:44,265 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:24:44,265 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:24:44,280 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:24:44,280 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:26:19,358 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account` WHERE `account_manage_account`.`is_paid` = 0 ; args=(0,)
+2013-01-18 17:26:19,375 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` WHERE `account_manage_account`.`is_paid` = 0  ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 3; args=(0,)
+2013-01-18 17:26:19,375 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:26:19,375 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:26:19,375 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:39:29,655 ERROR Internal Server Error: /account_manage/account/list/
+Traceback (most recent call last):
+  File "E:\Python27\lib\site-packages\django\core\handlers\base.py", line 101, in get_response
+    request.path_info)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\myOA\urls.py", line 25, in <module>
+    (r'^account_manage/', include('account_manage.urls')),
+  File "E:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\account_manage\urls.py", line 4, in <module>
+    from views import *
+  File "G:\myOA\account_manage\views.py", line 20, in <module>
+    my_usr=my_user.objects.get(login_name=request.session['login_name'])
+NameError: name 'request' is not defined
+2013-01-18 17:39:29,858 ERROR Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "E:\Python27\lib\site-packages\django\core\handlers\base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "E:\Python27\lib\site-packages\django\middleware\common.py", line 67, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 531, in is_valid_path
+    resolve(path, urlconf)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 420, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\myOA\urls.py", line 25, in <module>
+    (r'^account_manage/', include('account_manage.urls')),
+  File "E:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\account_manage\urls.py", line 4, in <module>
+    from views import *
+  File "G:\myOA\account_manage\views.py", line 20, in <module>
+    my_usr=my_user.objects.get(login_name=request.session['login_name'])
+NameError: name 'request' is not defined
+2013-01-18 17:40:36,296 ERROR Internal Server Error: /account_manage/account/list/
+Traceback (most recent call last):
+  File "E:\Python27\lib\site-packages\django\core\handlers\base.py", line 101, in get_response
+    request.path_info)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\myOA\urls.py", line 25, in <module>
+    (r'^account_manage/', include('account_manage.urls')),
+  File "E:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\account_manage\urls.py", line 4, in <module>
+    from views import *
+  File "G:\myOA\account_manage\views.py", line 20, in <module>
+    my_usr=my_user.objects.get(login_name=request.session['login_name'])
+NameError: name 'request' is not defined
+2013-01-18 17:40:36,483 ERROR Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "E:\Python27\lib\site-packages\django\core\handlers\base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "E:\Python27\lib\site-packages\django\middleware\common.py", line 67, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 531, in is_valid_path
+    resolve(path, urlconf)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 420, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\myOA\urls.py", line 25, in <module>
+    (r'^account_manage/', include('account_manage.urls')),
+  File "E:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\account_manage\urls.py", line 4, in <module>
+    from views import *
+  File "G:\myOA\account_manage\views.py", line 20, in <module>
+    my_usr=my_user.objects.get(login_name=request.session['login_name'])
+NameError: name 'request' is not defined
+2013-01-18 17:40:54,358 ERROR Internal Server Error: /account_manage/account/list/
+Traceback (most recent call last):
+  File "E:\Python27\lib\site-packages\django\core\handlers\base.py", line 101, in get_response
+    request.path_info)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\myOA\urls.py", line 25, in <module>
+    (r'^account_manage/', include('account_manage.urls')),
+  File "E:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\account_manage\urls.py", line 4, in <module>
+    from views import *
+  File "G:\myOA\account_manage\views.py", line 20, in <module>
+    my_usr=my_user.objects.get(login_name=request.session['login_name'])
+NameError: name 'request' is not defined
+2013-01-18 17:40:54,546 ERROR Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "E:\Python27\lib\site-packages\django\core\handlers\base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "E:\Python27\lib\site-packages\django\middleware\common.py", line 67, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 531, in is_valid_path
+    resolve(path, urlconf)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 420, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "E:\Python27\lib\site-packages\django\core\urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\myOA\urls.py", line 25, in <module>
+    (r'^account_manage/', include('account_manage.urls')),
+  File "E:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "E:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "G:\myOA\account_manage\urls.py", line 4, in <module>
+    from views import *
+  File "G:\myOA\account_manage\views.py", line 20, in <module>
+    my_usr=my_user.objects.get(login_name=request.session['login_name'])
+NameError: name 'request' is not defined
+2013-01-18 17:42:06,280 DEBUG (0.000) SELECT COUNT(*) FROM `account_manage_account`; args=()
+2013-01-18 17:42:06,296 DEBUG (0.000) SELECT `account_manage_account`.`id`, `account_manage_account`.`user_id_id`, `account_manage_account`.`department_id`, `account_manage_account`.`type_id_id`, `account_manage_account`.`amount`, `account_manage_account`.`beg_date`, `account_manage_account`.`modify_date`, `account_manage_account`.`end_date`, `account_manage_account`.`status`, `account_manage_account`.`approver_id`, `account_manage_account`.`level`, `account_manage_account`.`is_paid` FROM `account_manage_account` ORDER BY `account_manage_account`.`beg_date` ASC LIMIT 4; args=()
+2013-01-18 17:42:06,296 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:42:06,296 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:42:06,296 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)
+2013-01-18 17:42:06,296 DEBUG (0.000) SELECT `system_avalibe_department`.`id`, `system_avalibe_department`.`department_name`, `system_avalibe_department`.`parent_id` FROM `system_avalibe_department` WHERE `system_avalibe_department`.`id` = 1 ; args=(1,)

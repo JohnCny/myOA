@@ -15,6 +15,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^login/$','myOA.views.login_view'),
+    url(r'^error/$','myOA.views.error'),
 )
 #static
 urlpatterns += staticfiles_urlpatterns()

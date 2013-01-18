@@ -11,6 +11,9 @@ from forms import *
 class Account_manage_test (TestCase):
     def setUp(self):  
         self.account = {
+            'user_id':1,
+            'department':1,
+            'type_id':1,
             'beg_date':'2013-01-01',
             'modify_date':'2013-01-02',
             'end_date':'2013-01-03',

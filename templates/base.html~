@@ -17,8 +17,8 @@
       }
     </style>
     <script src="/static/js/jquery.js"></script>
-    <script src="/static/js/bootstrap-datepicker.js"></script>
     <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/bootstrap-datepicker.js"></script>
     <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
     <title>
         {% block title %} {% endblock %}

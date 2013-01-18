@@ -1,5 +1,12 @@
 # Django settings for myOA project.
 import os
+import logging
+
+logging.basicConfig(
+    level = logging.DEBUG,
+    format = '%(asctime)s %(levelname)s %(message)s',
+    filename = 'django_log.log', 
+)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
