@@ -1,0 +1,65 @@
+
+{% extends "base.html" %}
+
+{% block title %} 费用审批 {% endblock %}
+{% block pagename %} 费用清单 {% endblock %}
+{% block pagesubname %} 费用审批 {% endblock %}
+
+{% block heading %} <h1> account</h1><h2>View</h2>  {% endblock %}
+{% block content %}
+<style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .div-check {
+        max-width: 450px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+
+  </style>
+<div class=span11>
+<div class="div-check">
+    <div class="row">
+        <div class="span3"><span class="label">所属部门:</span></div>
+        <div class="span2"><input class="input-large" id="disabledInput" type="text"
+            value={{account_instance.department.department_name}} disabled/></div>
+    </div>
+    <div class="row">
+        <div class="span3"><span class="label">金额:</span></div>    
+        <div class="span2"><input class="input-large" id="disabledInput" type="text"
+            value={{account_instance.amount}} disabled/></div>
+    </div>
+    <div class="row">
+        <div class="span3"><span class="label">费用开始时间:</span></div>
+        <div class="span2"><input class="input-large" id="disabledInput" type="text"
+            value={{account_instance.beg_date|date:"Y-m-d"}} disabled/></div>
+    </div>
+    <div class="row">
+        <div class="span3"><span class="label">费用结束时间:</span></div>
+        <div class="span2"><input class="input-large" id="disabledInput" type="text"
+            value={{account_instance.end_date|date:"Y-m-d"}} disabled/></div>
+    </div>
+    <div class="row">
+        <div class="span3"><span class="label">申请人:</span></div>
+        <div class="span2"><input class="input-large" id="disabledInput" type="text"
+            value={{account_instance.user_id.real_name}} disabled/></div>
+    </div>
+    <div class="row">
+        <div class="span pull-right"><button class="btn btn-success" 
+        onclick="location.href='{% url account_manage.views.check_account account_instance.id %}'" id="btn-check">审批通过</button></div>
+    </div>
+</div>
+</div>
+{% endblock %}

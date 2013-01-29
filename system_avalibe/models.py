@@ -7,7 +7,7 @@ from django.contrib import admin
 class department(models.Model):
     department_name=models.CharField(max_length=16)
     parent_id=models.IntegerField()
-    
+
     def __unicode__(self):
         return self.department_name
     
@@ -29,6 +29,7 @@ class my_user(models.Model):
     department=models.ForeignKey(department)
     last_login_date=models.DateTimeField(default=datetime.datetime.now)
     birthday=models.DateTimeField(default=datetime.datetime.now)
+    company=models.IntegerField()
 
     def __unicode__(self):
         return self.login_name
@@ -39,6 +40,26 @@ class my_account_type(models.Model):
 
     def __unicode__(self):
         return self.type_name
+
+class sp_company(models.Model):
+    sp_company_name=models.CharField(max_length=16)
+
+    def __unicode__(self):
+        return self.sp_company_name
+
+class sp_type(models.Model):
+    sp_company=models.ForeignKey(sp_company)
+    sp_type_name=models.CharField(max_length=20)
+
+    def __unicode__(self):
+        return self.sp_type_name
+
+class warehouse_position(models.Model):
+    position_name=models.CharField(max_length=16)
+    parent=models.IntegerField()
+    
+    def __unicode__(self):
+        return self.position_name
 
 admin.site.register(my_user)
 admin.site.register(my_account_type)

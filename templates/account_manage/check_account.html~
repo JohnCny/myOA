@@ -1,0 +1,95 @@
+
+{% extends "base.html" %}
+
+{% block title %} 费用审批 {% endblock %}
+{% block pagename %} 费用清单 {% endblock %}
+{% block pagesubname %} 费用审批 {% endblock %}
+{% block content %}
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <td>#</td>
+            <td>所属部门</td>
+            <td>申请人</td>
+            <td>费用类型</td>
+            <td>金额</td>
+            <td>提交时间</td>
+            <td>审批状态</td>
+            <td>是否付款</td>
+            <td></td>
+        </tr>
+        {% for item in list_items.object_list %}
+        
+        <tr class={% ifequal item.is_paid 0%}
+                    {% ifnotequal item.status 0%}
+                    {% ifequal item.status 2%} info {% else %} warning {%endifequal%} 
+                    {% else %}
+                        error
+                    {%endifnotequal%}
+                  {% else %}
+                    success    
+                    {% endifequal %}>
+            <td>{{item.id}}</td>
+            <td>{{item.department.department_name}}</td>
+            <td>{{item.user_id.real_name}}</td>
+            <td>{{item.type_id.type_name}}</td>
+            <td>{{item.amount}}</td>
+            <td>{{item.modify_date|date:"Y-m-d"}}</td>
+            
+            {% ifnotequal item.status 0 %}
+            {% ifequal item.status 1 %}
+                
+                <td>等待上级审批</td>
+                
+                {% else %}
+                <td>已审批</td>
+                {% endifequal %}
+            {% else %}
+            <td>未审批</td>
+            {% endifnotequal  %}
+            
+            {% ifequal item.is_paid 1 %}
+            <td>已付款</td>
+            {% else %}
+            <td>未付款</td>
+            {% endifequal  %}
+            <td>
+                <p><input type="button" class="btn btn-small btn-success" 
+                onclick="location.href='{% url account_manage.views.view_account item.id %}'" value="审核"/> </p>
+                <p><input type="button" class="btn btn-small btn-danger" 
+                 onclick="location.href='{% url account_manage.views.delete_account item.id %}'" value="删除"/></p>    
+            </td>
+        </tr>  
+        {% endfor %}
+    {% if list_items.has_previous %}  
+        <a href="?page={{ list_items.previous_page_number }}">上一页</a>  
+    {% endif %}  
+    <div class="span2  pull-right">  
+    <span >  
+        第{{ list_items.number }}页，共{{ list_items.paginator.num_pages }}页  
+    </span>  
+      
+    {% if list_items.has_next %}  
+        <a href="?page={{ list_items.next_page_number }}">下一页</a>  
+    {% endif %}
+    </div>
+</table>
+<form method="POST" class="form-inline">{% csrf_token %}
+<label class="control-label" for="beg_date">开始日期:</label>
+<input type="text"  class="input-small" id="beg_date" name="beg_date" />
+-
+<label class="control-label"  for="end_date">结束日期:</label>
+<input type="text" id="end_date" class="input-small" name="end_date" />
+
+<input type="submit" class="btn btn-small btn-primary" value="查询" name="search"/>
+<p class="muted">*不选择表示查询全部</p>   
+
+</form>
+<script>
+    $('#beg_date').datepicker();
+	$('#end_date').datepicker();
+        
+</script>
+{% endblock %}  
+
+

@@ -35,16 +35,117 @@
           </a>
           <a class="brand" href="#"><h>CardPay-OA</h></a>
           <div class="nav-collapse collapse">
-            <ul class="nav">
-                <li><a href="#">主页</a></li>
-                <li><a href="#contact">提交BUG</a></li>
+              <p class="navbar-text pull-right">
+           
+            {% if request.session.login_name%}
+            当前用户--<a href="#"class="navbar-link">{{request.session.real_name}}</a>
+            {% endif %}
+            <a class="btn btn-danger small" href="{% url myOA.views.logout %}">注销</a>
+            </p>
+              
+              <ul class="nav">
+                  <li><a href="#">主页</a></li>
+                  <li><a href="#contact">提交BUG</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
 </div>
-
-<div class="container">  
+<div class="container-fluid">
+    {%if not login_flag%}
+    <div class="row-fluid">
+<div id="left-side" class="span2 hidden-phone">
+      
+        
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              
+                <li class="nav-header active">
+                  费用
+                </li>
+                <li >
+                  
+                  <a href="/account_manage/account/create/">新增费用</a>
+                  
+                </li>
+                <li >
+                  
+                  <a href="/account_manage/account/list/">费用查询</a>
+                  
+                </li>
+                {%ifnotequal request.session.position_grade 0%}
+                <li>
+                  
+                  <a href="/account_manage/account/check_account/">费用审批</a>
+                  
+                </li>
+                {%endifnotequal%}
+                {%ifequal request.session.department_id 2%}
+                <li>
+                  
+                  <a href="/account_manage/account/list_pay/">费用支付</a>
+                  
+                </li>
+                {%endifequal%}
+                
+              
+                <li class="nav-header">
+                  备件管理
+                </li>
+                
+                <li>
+                  
+                  <a href="#">备件查询</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="#">备件入库</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="#">备件出库</a>
+                  
+                </li>
+                <li>
+                  
+                  <a href="#">备件盘点</a>
+                  
+                </li>
+              
+                <li class="nav-header">
+                  人事管理
+                </li>
+                
+                <li>
+                  
+                  <a href="#">人员新增</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="#">人员离职</a>
+                  
+                </li>
+                
+                
+              
+                <li class="nav-header">
+                  公司论坛
+                </li>
+                
+            
+            </ul>
+          </div><!--/.well -->
+        
+      
+      </div><!--/span-->
+      {%endif%}        
+<div class="span10">  
 <div class="content">  
         <div class="page-header">  
             <h2>{% block pagename %} 页面名称 {% endblock %} <small>{% block pagesubname %}子名称{% endblock %}</small></h2>
@@ -55,15 +156,16 @@
         {% endblock %}  
     </div><!-- /content -->
 
-<div id="footer">
-      <div class="container">
+
+      <div class="span  pull-right">
           <p class="muted credit"> 
         &copy; <a href="http://www.qkcardpay.com">乾康科技</a>
           </p>
       </div>
-    </div>
-    
-</div>  
 
+    
+  </div>
+</div>  
+</div>
 </body>
 </html>

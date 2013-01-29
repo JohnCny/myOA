@@ -1,0 +1,57 @@
+
+{% extends "base.html" %}
+
+{% block title %} 库存查询 {% endblock %}
+{% block pagename %} 库存 {% endblock %}
+{% block pagesubname %} 库存查看 {% endblock %}
+{% block content %}
+<div class="span11">
+    <div class="row">
+        <form method="POST" class="form-inline">{% csrf_token %}
+            <label class="control-label" for="sp_type">备件类型:</label>
+            <input type="text"  class="input-small" id="sp_type" name="sp_type" />
+
+            <label class="control-label"  for="sp_company">备件厂商:</label>
+            <input type="text" id="sp_company" class="input-small" name="sp_company" />
+
+            <input type="submit" class="btn btn-small btn-primary" value="查询" name="search"/>
+            <p class="muted">*不选择表示查询全部</p>   
+
+        </form>
+
+    </div>
+    <table class="table table-striped">
+        <tr>
+            <td>备件编号</td>
+            <td>备件类型</td>
+            <td>备件厂商</td>
+            <td>数量</td>
+            <td>当前状态</td>
+            <td>所在仓库</td>
+        </tr>
+        {% for item in list_items.object_list %}
+        
+        <tr >
+            <td>{{item.sp_id}}</td>
+            <td>{{item.sp_type}}</td>
+            <td>{{item.sp_company}}</td>
+            <td>{{item.amount}}</td>
+            <td>{{item.status_translate}}</td>
+            <td>{{item.warehouse_position.position_name}}</td>           
+        </tr>  
+        {% endfor %}
+    {% if list_items.has_previous %}  
+        <a href="?page={{ list_items.previous_page_number }}">上一页</a>  
+    {% endif %}  
+    <div class="span2  pull-right">  
+    <span >  
+        第{{ list_items.number }}页，共{{ list_items.paginator.num_pages }}页  
+    </span>  
+      
+    {% if list_items.has_next %}  
+        <a href="?page={{ list_items.next_page_number }}">下一页</a>  
+    {% endif %}
+    </div>
+</table>
+
+

@@ -1,0 +1,109 @@
+
+{% extends "base.html" %}
+
+{% block title %} 费用支付 {% endblock %}
+{% block pagename %} 费用清单 {% endblock %}
+{% block pagesubname %} 费用支付 {% endblock %}
+{% block content %}
+<script>
+function checkAll(e, itemName)
+    {    
+        var aa = document.getElementsByName(itemName);    //获取全选复选框
+        for (var i=0; i<aa.length; i++){
+         aa[i].checked = e.checked;    //改变所有复选框的状态为全选复选框的状态
+        }
+    }
+
+</script>
+
+<div class="container">
+    <form method="POST">{% csrf_token %}
+    <table class="table table-striped">
+        <tr>
+            {% if pay_flag %}
+            <td><label class="checkbox">
+                    <input type="checkbox" onclick="checkAll(this,'cb_field')">
+                    全选</label></td>{%endif%}
+            <td>#</td>
+            <td>所属部门</td>
+            <td>申请人</td>
+            <td>费用类型</td>
+            <td>金额</td>
+            <td>提交时间</td>
+            <td>审批状态</td>
+            <td>是否付款</td>
+        </tr>
+        {% for item in list_items.object_list %}
+        
+        <tr class={% ifequal item.is_paid 0%}
+                    info
+                  {% else %}
+                    success    
+                    {% endifequal %}>
+                    {% if pay_flag %}<td><input type="checkbox" value="{{item.id}}" name="cb_field"></td>{%endif%}
+            <td>{{item.id}}</td>
+            <td>{{item.department.department_name}}</td>
+            <td>{{item.user_id.real_name}}</td>
+            <td>{{item.type_id.type_name}}</td>
+            <td>{{item.amount}}</td>
+            <td>{{item.modify_date|date:"Y-m-d"}}</td>
+            
+            {% ifnotequal item.status 0 %}
+            {% ifequal item.status 1 %}
+                
+                <td>等待上级审批</td>
+                
+                {% else %}
+                <td>已审批</td>
+                {% endifequal %}
+            {% else %}
+            <td>未审批</td>
+            {% endifnotequal  %}
+            
+            {% ifequal item.is_paid 1 %}
+            <td>已付款</td>
+            {% else %}
+            <td>未付款</td>
+            {% endifequal  %}
+            
+        </tr>  
+        {% endfor %}
+    {% if list_items.has_previous %}  
+        <a href="?page={{ list_items.previous_page_number }}">上一页</a>  
+    {% endif %}  
+    <div class="span2  pull-right">  
+    <span >  
+        第{{ list_items.number }}页，共{{ list_items.paginator.num_pages }}页  
+    </span>  
+      
+    {% if list_items.has_next %}  
+        <a href="?page={{ list_items.next_page_number }}">下一页</a>  
+    {% endif %}
+    </div>
+
+</table>
+{% if pay_flag%}
+<div class="span pull-right">
+    <p>
+    <input type="submit" class="btn btn-primary" value="显示所有款项" name="showall"/>
+    </p>
+</div>
+{%else%}
+<div class="span pull-right">
+    <p>
+    <input type="button" class="btn btn-primary" value="返回" name="back_to_pay" 
+    onclick="javascript:history.go(-1)"/>
+    </p>
+</div>
+{%endif%}
+{% if pay_flag%}
+<div class="span pull-right">
+        <p>
+        <input type="submit" class="btn btn-primary" value="付款" name="pay"/>  
+    </p>
+</div>
+{% endif %}
+</form>    
+{% endblock %}  
+
+

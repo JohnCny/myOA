@@ -14,7 +14,7 @@ class accountForm(forms.ModelForm):
     
     class Meta:
         model=account
-        exclude = ('user_id','approver',"modify_date","status","level","is_paid")
+        exclude = ('user_id','approver',"modify_date","status","level","is_paid","pay_date")
         # exclude = [] # uncomment this line and specify any field to exclude it from the form
 
     def __init__(self, *args, **kwargs):
@@ -31,5 +31,5 @@ class accountForm(forms.ModelForm):
         my_end_date=self.cleaned_data['end_date']
         if my_beg_date>my_end_date:
             raise forms.ValidationError("开始日期必须小于结束日期")
-        return my_beg_date
+        return my_end_date
     

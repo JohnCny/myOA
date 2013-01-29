@@ -39,12 +39,14 @@
 
 <div class="container">
       <form class="form-signin" method="POST"> {% csrf_token %}
-        <h2 class="form-signin-heading">登陆</h2>
+          <h2 class="form-signin-heading">登陆</h2>
+
         <input type="text" class="input-block-level" placeholder="用户名"  name="login_name"  id="login_name">
         <input type="password" class="input-block-level" placeholder="密码"  id="login_password" name="login_password">
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> 记住我
-        </label>
+        <!--<label class="checkbox">
+            <input type="checkbox" value="remember-me"> 记住我            
+        </label>!-->
+        {% if notExist%}<p class="text-error">用户名或密码错误</p> {%endif%}
         <button class="btn btn-large btn-primary" type="submit" name="submit" id="submit">登陆</button>
       </form>
 

@@ -5,11 +5,13 @@
 {% block pagename %} 费用清单 {% endblock %}
 {% block pagesubname %} 费用查看 {% endblock %}
 {% block content %}
-<div class="container">
+<div class="span12">
     <table class="table table-striped">
         <tr>
             <td>#</td>
             <td>所属部门</td>
+            <td>申请人</td>
+            <td>费用类型</td>
             <td>金额</td>
             <td>提交时间</td>
             <td>审批状态</td>
@@ -26,11 +28,13 @@
                     {%endifnotequal%}
                   {% else %}
                     success    
-                {% endifequal %}>
+                    {% endifequal %}>
             <td>{{item.id}}</td>
             <td>{{item.department.department_name}}</td>
+            <td>{{item.user_id.real_name}}</td>
+            <td>{{item.type_id.type_name}}</td>
             <td>{{item.amount}}</td>
-            <td>{{item.modify_date}}</td>
+            <td>{{item.modify_date|date:"Y-m-d"}}</td>
             
             {% ifnotequal item.status 0 %}
             {% ifequal item.status 1 %}
@@ -49,10 +53,11 @@
             {% else %}
             <td>未付款</td>
             {% endifequal  %}
-            <td> 
+            <td>
                 <p><input type="button" class="btn btn-small btn-primary" 
                  onclick="location.href='{% url account_manage.views.edit_account item.id %}'" value="编辑"/> </p>  
-                <p><input type="button" class="btn btn-small btn-danger" onclick="location.href='"#"'" value="删除"/></p>
+                <p><input type="button" class="btn btn-small btn-danger" 
+                 onclick="location.href='{% url account_manage.views.delete_account item.id %}'" value="删除"/></p>
             </td>
         </tr>  
         {% endfor %}
@@ -68,13 +73,35 @@
         <a href="?page={{ list_items.next_page_number }}">下一页</a>  
     {% endif %}
     </div>
-    <div class="span2">
+    <div class="span">
         <p>
         <input type="button" class="btn btn-small btn-primary" onclick="location.href='{% url account_manage.views.create_account %}'" value="新增报销"/>  
     </p>
-    </div>  
+    </div>
+
 </table>
-    
-    
+<form method="POST" class="form-inline">{% csrf_token %}
+<label class="control-label" for="beg_date">开始日期:</label>
+<input type="text"  class="input-small" id="beg_date" name="beg_date" />
+-
+<label class="control-label"  for="end_date">结束日期:</label>
+<input type="text" id="end_date" class="input-small" name="end_date" />
+
+<input type="submit" class="btn btn-small btn-primary" value="查询" name="search"/>
+<p class="muted">*不选择表示查询全部</p>   
+
+</form>
+{% ifequal request.session.department 2%}
+    <div class="span pull-right">
+        <p>
+        <input type="button" class="btn btn-small btn-primary" onclick="location.href='{% url account_manage.views.list_pay_account %}'" value="财务付款"/>  
+    </p>
+</div>
+{% endifequal%}
+<script>
+    $('#beg_date').datepicker();
+	$('#end_date').datepicker();
+        
+</script>
 {% endblock %}  
 

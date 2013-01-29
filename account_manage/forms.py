@@ -14,7 +14,7 @@ class accountForm(forms.ModelForm):
     
     class Meta:
         model=account
-        exclude = ('user_id','approver',"modify_date","status","level","is_paid")
+        exclude = ('user_id','approver',"modify_date","status","level","is_paid","pay_date","company")
         # exclude = [] # uncomment this line and specify any field to exclude it from the form
 
     def __init__(self, *args, **kwargs):

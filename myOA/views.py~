@@ -13,14 +13,17 @@ def login_view(request):
         mlogin_password=request.POST['login_password']
         try:
             myUser = my_user.objects.get(login_name=mlogin_name,login_password=mlogin_password)
-        except KeyError:
-            return render_to_response('login.html',{},context_instance=RequestContext(request))
+        except my_user.DoesNotExist:
+            return render_to_response('login.html',{'notExist':True},context_instance=RequestContext(request))
 
         if myUser is not None:
             request.session['login_name']=myUser.login_name
+            request.session['real_name']=myUser.real_name
+            request.session['position_grade']=myUser.position.position_grade
             return HttpResponseRedirect('/account_manage/account/list')
     if request.method == 'GET':
-        return render_to_response('login.html',{},context_instance=RequestContext(request))
+        login_flag=True
+        return render_to_response('login.html',locals(),context_instance=RequestContext(request))
 
 def logout(request):
     try:
@@ -30,4 +33,4 @@ def logout(request):
     return HttpResponseRedirect("/login/")
 
 def error(request):
-    return HttpResponseRedirect('/error/')
+    return render_to_response('error.html',{},context_instance=RequestContext(request))

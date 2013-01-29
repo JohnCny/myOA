@@ -93,6 +93,7 @@ SECRET_KEY = 'o2fuj-=t=%umhl0ngi23yt)y2zt2dg_f2x399jk@=h3*6y5ato'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
+    
 #     'django.template.loaders.eggs.Loader',
 )
 
@@ -133,6 +134,7 @@ INSTALLED_APPS = (
     #'django.contrib.admindocs',
     'system_avalibe',
     'account_manage',
+    'warehouse',
     'django-groundwork', 
 )
 

@@ -6,9 +6,9 @@
 <div class="container">
 
       <h1>请先登录</h1>
-      <p>未登录进行操作会看到此页面，本页面将于3秒后跳转至登录页。</p>
-
-    </div> <!-- /container -->
+      <p>未登录进行操作会看到此页面，本页面将于3秒后跳转至登录页。<br/>若未跳转，<a href="/login/">请点此</a></p>
+      
+</div> <!-- /container -->
 
 
 {% endblock %}

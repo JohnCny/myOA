@@ -19,6 +19,8 @@ class account (models.Model):
     approver=models.ForeignKey(my_user,related_name="approver",verbose_name="审核人")
     level=models.IntegerField(default=0,verbose_name="级别") 
     is_paid=models.IntegerField(default=0,verbose_name="是否付款")
+    pay_date=models.DateField(default=None,verbose_name="付款日期")
+    company=models.IntegerField(default=0,verbose_name="公司")
     def __unicode__(self):
         return str(self.amount)
 
